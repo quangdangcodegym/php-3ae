@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+}
+
+.container {
+    width: 50%;
+}
+.tb-product{
+    width: 100%;
+}
+.row {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.col-3 {
+    width: 33.33%;
+}
+
+.col-7 {
+    width: 66.66%;
+}
+.end-col {
+    text-align: center;
+}
