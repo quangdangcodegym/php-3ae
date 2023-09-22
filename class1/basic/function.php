@@ -30,4 +30,3 @@ function swap(&$arr){
 }
 swap($arr);
 var_dump($arr); // đổi / không, không
-?>
