@@ -8,6 +8,8 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Services\IProductService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+
 
 class ProductController extends Controller
 {
@@ -18,6 +20,8 @@ class ProductController extends Controller
     }
     public function index()
     {
+        // Log sẽ được lưu ở storage/logs/laravel.logs
+        Log::debug('Xử lý url /index');
         $products = $this->productService->getAll();
         $categories = Category::all();
         return view('products.index', compact('products'));
@@ -33,6 +37,7 @@ class ProductController extends Controller
     public function save(ValidationProduct $validateProductRequest)
     {
         // dd($validateProductRequest->all());          // Xem dữ liệu gửi về có đúng ko
+        // ValidationProduct: tìm hiểu về tạo FormRequest để validate
         $this->productService->create($validateProductRequest->all());
         return redirect()->route('products.index')->with("msg", "Add product success")->with('msgAction', 'success');
     }
