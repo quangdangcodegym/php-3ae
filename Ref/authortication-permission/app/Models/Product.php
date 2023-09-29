@@ -14,7 +14,8 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
-    protected $attributes = [
-        'status' => true,
-    ];
+
+    // protected $attributes = [
+    //     'status' => true,
+    // ];
 }
