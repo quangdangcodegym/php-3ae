@@ -258,6 +258,10 @@ Cấu hình ở file config/log
     Log vào chanel stack đã được đăng kí mặc định
 */
 Log::info('Access product index page ' . rand(1, 100));
+
+
+use Illuminate\Support\Facades\Log;
+Log::debug('Showing user profile for user: '.$id);
 ```
 
 https://viblo.asia/p/exceptions-trong-laravel-lam-the-nao-de-catch-handle-va-tu-tao-mot-exception-de-xu-ly-van-de-cua-rieng-minh-bJzKmGnOl9N
